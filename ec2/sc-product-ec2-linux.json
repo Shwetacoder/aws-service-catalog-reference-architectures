@@ -50,16 +50,7 @@
             "ProductId" :   {"Ref":"scec2linuxproduct"}
           }
         },
-        "constraintec2linux":{
-          "Type" : "AWS::ServiceCatalog::LaunchRoleConstraint",
-          "DependsOn" : "Associateec2linux",
-          "Properties" : {
-            "PortfolioId" : {"Ref":"PortfolioId"},
-            "ProductId" :   {"Ref":"scec2linuxproduct"},
-            "LocalRoleName" : {"Ref":"LaunchConstraintRole"},
-            "Description": {"Ref":"LaunchConstraintRole"}
-          }
-        }
+       
     },
     "Outputs": {
         "ProductId":{"Value": { "Ref":"scec2linuxproduct" } }
